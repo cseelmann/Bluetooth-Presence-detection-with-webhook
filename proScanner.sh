@@ -14,7 +14,6 @@ gtags=("7C:2F:80:90:22:22" "7C:2F:80:90:33:55")	# G-tags mac Adresses
 
 homeeip="homee.fritz.box"
 homeeport="7681"
-homeeport="80"
 webhooks_key="asdasdadas5d78asg4da6738"
 
 # ----------------------
