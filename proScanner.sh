@@ -2,8 +2,8 @@
 # Julian
 # 24.07.2017
 # Comment:
-# Script läuft nach dem Start des RPI und Dauerschleife
-# wenn beide G-tags 5 Schleifendurchläufe nicht erkannt werden
+# Script lÃ¤uft nach dem Start des RPI und Dauerschleife
+# wenn beide G-tags 5 SchleifendurchlÃ¤ufe nicht erkannt werden
 # wird auf Status Abwesend gesetzt
 
 ncounter=1
@@ -12,7 +12,7 @@ daheim=2
 # Whitelist clear
 sudo hcitool lewlclr
 
-# G-tags 2 Stück im Einsatz
+# G-tags 2 StÃ¼ck im Einsatz
 sudo hcitool lewladd "7C:2F:xx:xx:46:xx"
 sudo hcitool lewladd "7C:2F:xx:xx:46:yy"
 
@@ -30,7 +30,7 @@ while true; do
                     if [ "$daheim" == "0" ] || [ "$daheim" == "2" ]; then
                         daheim=1
                         echo $line "Anwesend"
-						# Hier URL Aufruf für Homee Webhook
+			# Hier URL Aufruf fÃ¼r Homee Webhook
                     fi
                 fi
     	    fi
@@ -40,7 +40,7 @@ while true; do
 	   echo "Counter Abwesend: " $ncounter
 	   if [ "$ncounter" == "5" ]; then
                echo "Abwesend"
-			   # Hier URL Aufruf für Homee Webhook
+	       # Hier URL Aufruf fÃ¼r Homee Webhook
                daheim=0
            fi
 	   ncounter=$[ncounter+ 1]
