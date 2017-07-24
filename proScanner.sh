@@ -12,9 +12,9 @@
 away=15 	# nach wieviel Durchläufen Status "abwesend"?
 gtags=("7C:2F:80:90:22:22" "7C:2F:80:90:33:55")	# G-tags mac Adresses
 
-homeeip="homee.fritz.box"
+homeeip="192.168.178.5"
 homeeport="7681"
-webhooks_key="asdasdadas5d78asg4da6738"
+webhooks_key="AAAAAAAAAAAAABBBBBBBBBBCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDEEEEEEEE"
 
 # ----------------------
 # do not edit below here 
@@ -41,7 +41,7 @@ while true; do
 		# Anwesend
 		if [ "$daheim" -eq 0 ]; then
 			echo "Status: anwesend"	
-			curl -sS "http://$homeeip:$homeeport/api/v2/webhook_trigger?webhooks_key=$webhooks_key&event=anwesend"	
+			curl "http://$homeeip:$homeeport/api/v2/webhook_trigger?webhooks_key=$webhooks_key&event=anwesend"	
 			daheim=1
 		fi
 		ncounter=1
@@ -53,7 +53,7 @@ while true; do
 		
 		if [ "$ncounter" == "$away" ]; then
 			echo "Status: abwesend"
-			curl -sS "http://$homeeip:$homeeport/api/v2/webhook_trigger?webhooks_key=$webhooks_key&event=abwesend"
+			curl "http://$homeeip:$homeeport/api/v2/webhook_trigger?webhooks_key=$webhooks_key&event=abwesend"
 			daheim=0
 		fi
 		ncounter=$[ncounter+ 1]
