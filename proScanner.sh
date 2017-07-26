@@ -1,4 +1,15 @@
 #!/bin/bash
+
+# Prüfen ob das Script schon ausgeführt wird, lässt einen weiteren start nicht zu
+# für Benutzung als Cronjob 
+for pid in $(pidof -x scanner.sh); do
+    if [ $pid != $$ ]; then
+        echo "[$(date)] : scanner.sh : Process is already running with PID $pid"
+        exit 1
+    fi
+done
+
+
 # Julian
 # 24.07.2017
 # Comment:
