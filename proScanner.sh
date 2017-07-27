@@ -34,10 +34,12 @@ webhooks_key="AAAAAAAAAAAAABBBBBBBBBBCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDEEEEEEEE"
 # do not edit below here 
 # ----------------------
 # Startverzögerung
+echo "G-tag Scanner for homee"
+echo ""
 i=5
 while [ $i -gt 0 ]; do
 	sleep 1
-	echo "Start in "$i
+	echo "starts in "$i
 	i=$[$i-1]
 done
 
@@ -51,6 +53,10 @@ echo "Gültige G-tags"
 for i in ${gtags[@]}; do
 	echo "$i"
 	sudo hcitool lewladd "$i"
+	if [ $? -eq 1 ]; then
+		echo "Bluetooth error; not installed?"
+		exit
+	fi
 done
 echo ""
 
