@@ -34,7 +34,13 @@ webhooks_key="AAAAAAAAAAAAABBBBBBBBBBCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDDDEEEEEEEE"
 # do not edit below here 
 # ----------------------
 # Startverzögerung
-sleep 10
+i=5
+while [ $i -gt 0 ]; do
+	sleep 1
+	echo "Start in "$i
+	i=$[$i-1]
+done
+
 ncounter=1
 daheim=0
 
