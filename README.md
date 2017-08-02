@@ -8,5 +8,5 @@ Vorher bitte im Script die G-Tags Adressen und Homee Konfiguration vornehmen
 
 Console: crontab -e
 
-*/1 * * * * cd /home/pi && ./scanner.sh
+*/1 * * * * cd /home/pi && ./proScanner.sh
 
