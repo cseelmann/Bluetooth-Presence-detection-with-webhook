@@ -35,6 +35,9 @@ for pid in $(pidof -x $script); do
         exit 1
     fi
 done
+sudo hciconfig hci0 down
+sleep 1
+sudo hciconfig hci0 up
 reset
 
 # Startverzögerung
