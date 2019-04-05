@@ -5,6 +5,10 @@ I use some Tile Mates to detect presence, the Tiles had to be paired with the iO
 
 Change script settings (bluetooth MAC and Username(s), as well as webhook token and destination. 
 
+For my Tiles I had to add the --random parameter to hcitool lewladd. Might work differently for you, please try on the commandline before blaming the script with:
+
+hcitool lewladd --random $MAC
+
 Script detects if already running. Install via cronjob:
 
 Console: crontab -e
