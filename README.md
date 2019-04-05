@@ -12,6 +12,7 @@ hcitool lewladd --random $MAC
 Script detects if already running. Install via cronjob:
 
 Console: crontab -e
-* * * * * root $PATH_TO_SCRIPT/bluetooth_presence_scanner.sh > /dev/null 2>&1
+
+```* * * * * root $PATH_TO_SCRIPT/bluetooth_presence_scanner.sh > /dev/null 2>&1```
 
 Thanks to https://github.com/mavnezz/proHomeeStatus, as I forked the project.
