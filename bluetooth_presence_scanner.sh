@@ -1,6 +1,7 @@
 #!/bin/bash
 # Thanks to https://github.com/mavnezz/proHomeeStatus
-
+# Need: sudo setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool`
+#
 # -------------------------
 # Settings (edit here)
 # -------------------------
